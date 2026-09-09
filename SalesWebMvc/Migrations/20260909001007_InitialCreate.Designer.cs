@@ -9,8 +9,8 @@ using SalesWebMvc.Models;
 namespace SalesWebMvc.Migrations
 {
     [DbContext(typeof(SalesWebMvcContext))]
-    [Migration("20260907220426_OtherEntities")]
-    partial class OtherEntities
+    [Migration("20260909001007_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -60,7 +60,7 @@ namespace SalesWebMvc.Migrations
 
                     b.Property<DateTime>("BirthDate");
 
-                    b.Property<int?>("DepártmentId");
+                    b.Property<int?>("DepartmentId");
 
                     b.Property<string>("Email");
 
@@ -68,7 +68,7 @@ namespace SalesWebMvc.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("DepártmentId");
+                    b.HasIndex("DepartmentId");
 
                     b.ToTable("Seller");
                 });
@@ -82,9 +82,9 @@ namespace SalesWebMvc.Migrations
 
             modelBuilder.Entity("SalesWebMvc.Models.Seller", b =>
                 {
-                    b.HasOne("SalesWebMvc.Models.Department", "Depártment")
+                    b.HasOne("SalesWebMvc.Models.Department", "Department")
                         .WithMany("Sellers")
-                        .HasForeignKey("DepártmentId");
+                        .HasForeignKey("DepartmentId");
                 });
 #pragma warning restore 612, 618
         }

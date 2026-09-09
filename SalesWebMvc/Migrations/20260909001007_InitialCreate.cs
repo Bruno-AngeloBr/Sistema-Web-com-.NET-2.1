@@ -4,10 +4,23 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SalesWebMvc.Migrations
 {
-    public partial class OtherEntities : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Department",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    Name = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Department", x => x.Id);
+                });
+
             migrationBuilder.CreateTable(
                 name: "Seller",
                 columns: table => new
@@ -18,14 +31,14 @@ namespace SalesWebMvc.Migrations
                     Email = table.Column<string>(nullable: true),
                     BirthDate = table.Column<DateTime>(nullable: false),
                     BaseSalary = table.Column<double>(nullable: false),
-                    DepártmentId = table.Column<int>(nullable: true)
+                    DepartmentId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Seller", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Seller_Department_DepártmentId",
-                        column: x => x.DepártmentId,
+                        name: "FK_Seller_Department_DepartmentId",
+                        column: x => x.DepartmentId,
                         principalTable: "Department",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
@@ -59,9 +72,9 @@ namespace SalesWebMvc.Migrations
                 column: "SellerId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Seller_DepártmentId",
+                name: "IX_Seller_DepartmentId",
                 table: "Seller",
-                column: "DepártmentId");
+                column: "DepartmentId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -71,6 +84,9 @@ namespace SalesWebMvc.Migrations
 
             migrationBuilder.DropTable(
                 name: "Seller");
+
+            migrationBuilder.DropTable(
+                name: "Department");
         }
     }
 }
