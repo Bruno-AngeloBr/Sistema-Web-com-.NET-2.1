@@ -55,102 +55,64 @@ JSON
 🚀 Como Executar o Projeto
 
 1. Clonar o Repositório
-Shell
-git clone https://github.com/seu-usuario/SalesWebMvc.git
-Mostrar mais linhas
+- Shell
+- git clone https://github.com/seu-usuario/SalesWebMvc.git
+
 2. Restaurar Dependências
-Shell
-dotnet restore
-Mostrar mais linhas
+- Shell
+- dotnet restore
+- Mostrar mais linhas
+
 3. Criar o Banco de Dados
-
-Executar as migrations:
-
-PowerShell
-Update-Database
-Mostrar mais linhas
+- Executar as migrations:
+- PowerShell
+- Update-Database
 
 Ou via CLI:
+- Shell
+- dotnet ef database update
 
-Shell
-dotnet ef database update
-Mostrar mais linhas
 4. Executar a Aplicação
-Shell
-dotnet run
-Mostrar mais linhas
+- Shell
+- dotnet run
 
 A aplicação estará disponível em:
 
-Plain Text
-https://localhost:5001
-Mostrar mais linhas
+- Plain Text
+- https://localhost:5001
 
 ou
 
-Plain Text
-http://localhost:5000
-Mostrar mais linhas
-📊 Modelo de Dados
-Department
-C#
-Department
-{
-Id
-Name
-}
-Mostrar mais linhas
-Seller
-C#
-Seller
-{
-Id
-Name
-Email
-BirthDate
-BaseSalary
-DepartmentId
-}
- 
-Mostrar mais linhas
-SalesRecord
-C#
-SalesRecord
-{
-Id
-Date
-Amount
-Status
-SellerId
-}
-``
-Mostrar mais linhas
+- Plain Text
+- http://localhost:5000
+
 🎯 Funcionalidades
-Departamentos
-Listar
-Criar
-Editar
-Excluir
-Visualizar detalhes
-Vendedores
-Listar
-Criar
-Editar
-Excluir
-Visualizar detalhes
-Registros de Vendas
-Pesquisa simples
-Pesquisa agrupada
-Filtro por período
-Relacionamento com vendedores
+- Departamentos
+- Listar
+- Criar
+- Editar
+- Excluir
+- Visualizar detalhes
+- Vendedores
+- Listar
+- Criar
+- Editar
+- Excluir
+- Visualizar detalhes
+- Registros de Vendas
+- Pesquisa simples
+- Pesquisa agrupada
+- Filtro por período
+- Relacionamento com vendedores
+  
 📚 Conceitos Aplicados
-MVC (Model View Controller)
-Dependency Injection
-Entity Framework Core
-Code First
-Migrations
-View Models
-LINQ
-Data Annotation Validation
-CRUD
-Relacionamentos entre entidades
+- MVC (Model View Controller)
+- Dependency Injection
+- Entity Framework Core
+- Code First
+- Migrations
+- View Models
+- LINQ
+- Data Annotation Validation
+- CRUD
+- Relacionamentos entre entidades
