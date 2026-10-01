@@ -56,7 +56,7 @@ JSON
 
 1. Clonar o Repositório
 - Shell
-- git clone https://github.com/seu-usuario/SalesWebMvc.git
+- git clone https://github.com/Bruno-AngeloBr/Sistema-Web-com-.NET-2.1.git
 
 2. Restaurar Dependências
 - Shell
@@ -75,16 +75,6 @@ Ou via CLI:
 4. Executar a Aplicação
 - Shell
 - dotnet run
-
-A aplicação estará disponível em:
-
-- Plain Text
-- https://localhost:5001
-
-ou
-
-- Plain Text
-- http://localhost:5000
 
 🎯 Funcionalidades
 - Departamentos
