@@ -8,51 +8,39 @@ O SalesWebMvc é uma aplicação desenvolvida com o objetivo de demonstrar conce
 
 O sistema permite:
 
-Gerenciamento de departamentos;
-Cadastro e manutenção de vendedores;
-Registro de vendas;
-Relacionamento entre entidades;
-Consultas de vendas por período;
-Operações CRUD completas.
+- Gerenciamento de departamentos;
+- Cadastro e manutenção de vendedores;
+- Registro de vendas;
+- Relacionamento entre entidades;
+- Consultas de vendas por período;
+- Operações CRUD completas.
 🛠 Tecnologias Utilizadas
-Backend
-ASP.NET Core MVC 2.1
-C#
-Entity Framework Core
-LINQ
-Banco de Dados
-MySQL
-Pomelo.EntityFrameworkCore.MySql
-Frontend
-Razor Pages
-Bootstrap
-jQuery
+- Backend
+- ASP.NET Core MVC 2.1
+- C#
+- Entity Framework Core
+- LINQ
+- Banco de Dados: MySQL
+- Pomelo.EntityFrameworkCore.MySql
+- Frontend
+- Razor Pages
+- Bootstrap
+- jQuery
+
 📂 Estrutura do Projeto
+
 🏗 Arquitetura MVC
-Models
 
-Responsáveis pela representação das entidades do sistema e pelas regras de negócio.
+- Models: Responsáveis pela representação das entidades do sistema e pelas regras de negócio.
 
-Exemplos:
+- Views: Responsáveis pela interface com o usuário utilizando Razor.
 
-Department
-Seller
-SalesRecord
-Views
-
-Responsáveis pela interface com o usuário utilizando Razor.
-
-Controllers
-
-Responsáveis por receber as requisições, processar os dados e retornar as Views.
+- Controllers: Responsáveis por receber as requisições, processar os dados e retornar as Views.
 
 ⚙️ Configuração do Banco de Dados
 
-No arquivo:
-
-JSON
-appsettings.json
-Mostrar mais linhas
+No arquivo: JSON
+- appsettings.json
 
 Configure sua string de conexão:
 
@@ -63,8 +51,9 @@ JSON
 }
 }
 ``
-Mostrar mais linhas
+
 🚀 Como Executar o Projeto
+
 1. Clonar o Repositório
 Shell
 git clone https://github.com/seu-usuario/SalesWebMvc.git
