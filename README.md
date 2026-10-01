@@ -39,7 +39,7 @@ O sistema permite:
 
 ⚙️ Configuração do Banco de Dados
 
-No arquivo: JSON
+Arquivo: JSON
 - appsettings.json
 
 Configure sua string de conexão:
